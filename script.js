@@ -1,17 +1,25 @@
 // App data
 const apps = [
-    { name: 'OneDrive', url: 'https://onedrive.live.com', icon: 'fa-brands fa-microsoft' },
-    { name: 'Blackbox AI', url: 'https://www.useblackbox.io', icon: 'fa-solid fa-robot' },
-    { name: 'Blynk IoT', url: 'https://blynk.io', icon: 'fa-solid fa-cloud' },
-    { name: 'Claude AI', url: 'https://claude.ai', icon: 'fa-solid fa-brain' }
+    { name: 'GitHub', url: 'https://github.com', icon: 'fab fa-github' },
+    { name: 'VS Code', url: 'https://vscode.dev', icon: 'fas fa-code' },
+    { name: 'CodePen', url: 'https://codepen.io', icon: 'fab fa-codepen' },
+    { name: 'Stack Overflow', url: 'https://stackoverflow.com', icon: 'fab fa-stack-overflow' },
+    { name: 'ChatGPT', url: 'https://chat.openai.com', icon: 'fas fa-robot' },
+    { name: 'LinkedIn', url: 'https://www.linkedin.com', icon: 'fab fa-linkedin' },
+    { name: 'YouTube', url: 'https://www.youtube.com', icon: 'fab fa-youtube' },
+    { name: 'Arduino Cloud', url: 'https://cloud.arduino.cc', icon: 'fab fa-arduino' },
+    { name: 'Replit', url: 'https://replit.com', icon: 'fas fa-terminal' },
+    { name: 'LeetCode', url: 'https://leetcode.com', icon: 'fas fa-code-branch' },
+    { name: 'Dev.to', url: 'https://dev.to', icon: 'fab fa-dev' },
+    { name: 'freeCodeCamp', url: 'https://www.freecodecamp.org', icon: 'fab fa-free-code-camp' }
 ];
 
 // Link data
 const links = [
-    { name: 'OneDrive', url: 'https://onedrive.live.com' },
-    { name: 'Blackbox AI', url: 'https://www.useblackbox.io' },
-    { name: 'Blynk IoT', url: 'https://blynk.io' },
-    { name: 'Claude AI', url: 'https://claude.ai' }
+    { name: 'GitHub', url: 'https://github.com' },
+    { name: 'VS Code', url: 'https://vscode.dev' },
+    { name: 'CodePen', url: 'https://codepen.io' },
+    { name: 'Stack Overflow', url: 'https://stackoverflow.com' }
 ];
 
 // Function to create app icons
@@ -19,7 +27,7 @@ function createAppIcons() {
     const appsContainer = document.getElementById('apps-container');
     apps.forEach(app => {
         const appDiv = document.createElement('div');
-        appDiv.className = 'col-md-3 col-sm-6 mb-4';
+        appDiv.className = 'col-md-2 col-sm-4 col-6 mb-4';
         appDiv.innerHTML = `
             <div class="app-icon animate__animated animate__fadeIn floating">
                 <a href="${app.url}" class="text-light text-decoration-none">
@@ -91,11 +99,11 @@ function handleVoiceSearch() {
 function animateFooter() {
     const codeAnimation = document.getElementById('code-animation');
     const codeSnippets = [
-        '<div style="color: #ff79c6;">const</div> <div style="color: #50fa7b;">life</div> <div style="color: #f8f8f2;">=</div> <div style="color: #f1fa8c;">"beautiful"</div><div style="color: #f8f8f2;">;</div>',
-        '<div style="color: #ff79c6;">if</div> <div style="color: #f8f8f2;">(</div><div style="color: #50fa7b;">code</div> <div style="color: #ff79c6;">===</div> <div style="color: #f1fa8c;">"clean"</div><div style="color: #f8f8f2;">)</div> <div style="color: #f8f8f2;">{</div>',
-        '<div style="color: #f8f8f2;">  </div><div style="color: #50fa7b;">success</div><div style="color: #f8f8f2;">++;</div>',
-        '<div style="color: #f8f8f2;">}</div>',
-        '<div style="color: #6272a4;">// Keep coding, keep learning!</div>'
+        '<div style="color: #569cd6;">const</div> <div style="color: #4ec9b0;">developer</div> <div style="color: #d4d4d4;">=</div> <div style="color: #ce9178;">"passionate"</div><div style="color: #d4d4d4;">;</div>',
+        '<div style="color: #c586c0;">if</div> <div style="color: #d4d4d4;">(</div><div style="color: #4ec9b0;">code</div> <div style="color: #d4d4d4;">===</div> <div style="color: #ce9178;">"clean"</div><div style="color: #d4d4d4;">)</div> <div style="color: #d4d4d4;">{</div>',
+        '<div style="color: #d4d4d4;">  </div><div style="color: #4ec9b0;">productivity</div><div style="color: #d4d4d4;">++;</div>',
+        '<div style="color: #d4d4d4;">}</div>',
+        '<div style="color: #6a9955;">// Keep coding, keep innovating!</div>'
     ];
 
     let currentSnippet = 0;
