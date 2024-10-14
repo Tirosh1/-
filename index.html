@@ -3,101 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Custom Chrome Homepage</title>
+    <title>Enhanced Custom Chrome Homepage</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
-<body>
+<body class="bg-dark text-light">
+    <div class="container-fluid p-0">
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+            <div class="container-fluid">
+                <a class="navbar-brand animate__animated animate__fadeIn" href="#">Custom Home</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link animate__animated animate__fadeIn" href="https://gmail.com"><i class="fas fa-envelope me-2"></i>Gmail</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link animate__animated animate__fadeIn" href="https://outlook.com"><i class="fab fa-microsoft me-2"></i>Outlook</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link animate__animated animate__fadeIn" href="https://github.com/YourProfile"><i class="fab fa-github me-2"></i>GitHub</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link animate__animated animate__fadeIn" href="https://youtube.com"><i class="fab fa-youtube me-2"></i>YouTube</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
 
-<!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">Custom Home</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item">
-          <a class="nav-link" href="https://gmail.com">Gmail</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="https://outlook.com">Outlook</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="https://github.com/YourProfile">GitHub</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="https://youtube.com">YouTube</a>
-        </li>
-      </ul>
-    </div>
-  </div>
-</nav>
+        <div class="container mt-5">
+            <!-- Search Container -->
+            <div class="row justify-content-center mb-5">
+                <div class="col-md-6">
+                    <div class="input-group animate__animated animate__fadeInDown">
+                        <input type="text" class="form-control" placeholder="Search anything" id="search-input">
+                        <button class="btn btn-primary" type="button" id="search-button">
+                            <i class="fas fa-search"></i>
+                        </button>
+                        <button class="btn btn-secondary" type="button" id="mic-button">
+                            <i class="fas fa-microphone"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
 
-<div id="main-wrapper" class="fancy-scrollbar">
-  <div id="main">
-    <div id="content">
-      <!-- Links Container -->
-      <div id="links-container" style="padding-left: 30%; padding-right: 30%;">
-        <a href="https://onedrive.live.com">OneDrive</a>
-        <a href="https://www.useblackbox.io">Blackbox AI</a>
-        <a href="https://blynk.io">Blynk IoT</a>
-        <a href="https://claude.ai">Claude AI</a>
-      </div>
-      
-      <!-- Custom Search Container -->
-      <div id="search-container" style="margin-top: 5%;">
-        <div id="search-input-container">
-          <img src="https://assets.codepen.io/1468070/Google+G+Icon.png" alt="" />
-          <input type="text" placeholder="Search anything" id="search" />
+            <!-- Apps Container -->
+            <div class="row justify-content-center mb-5" id="apps-container">
+                <!-- App icons will be dynamically added here by JavaScript -->
+            </div>
+
+            <!-- Links Container -->
+            <div class="row justify-content-center">
+                <div class="col-md-8 text-center">
+                    <div id="links-container" class="animate__animated animate__fadeIn">
+                        <!-- Links will be dynamically added here by JavaScript -->
+                    </div>
+                </div>
+            </div>
         </div>
-        <button id="image-button" onclick="googleSearch();" type="button">
-          <i class="fa-solid fa-search"></i>
-        </button>
-        <button id="mic-button" type="button">
-          <i class="fa-solid fa-microphone"></i>
-        </button>
-      </div>
-
-      <!-- Apps Container -->
-      <div id="apps-container">
-        <a href="https://onedrive.live.com">
-          <i class="fa-brands fa-microsoft"></i>
-          <div class="label">
-            <span class="name">OneDrive</span>
-            <span class="url" contenteditable="true">onedrive.live.com</span>
-          </div>
-        </a>
-        <a href="https://www.useblackbox.io">
-          <i class="fa-solid fa-robot"></i>
-          <div class="label">
-            <span class="name">Blackbox AI</span>
-            <span class="url" contenteditable="true">useblackbox.io</span>
-          </div>
-        </a>
-        <a href="https://blynk.io">
-          <i class="fa-solid fa-cloud"></i>
-          <div class="label">
-            <span class="name">Blynk IoT</span>
-            <span class="url" contenteditable="true">blynk.io</span>
-          </div>
-        </a>
-        <a href="https://claude.ai">
-          <i class="fa-solid fa-brain"></i>
-          <div class="label">
-            <span class="name">Claude AI</span>
-            <span class="url" contenteditable="true">claude.ai</span>
-          </div>
-        </a>
-      </div>
     </div>
-  </div>
-</div>
 
-<script src="script.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
