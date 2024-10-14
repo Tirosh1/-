@@ -1,66 +1,85 @@
-@import url('https://fonts.googleapis.com/css?family=Pacifico');
-:root {
-  --body-color: 48 48 58;
-  
-  --font-color: 255 255 255;
-  --highlight-color: 0 0 0;
-  
-  --theme-background: 20 20 20;
-}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
 
 body {
-  background-color: rgb(var(--body-color));
-  margin: 0px;
-  font-family: "Noto Sans", sans-serif;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+    min-height: 100vh;
 }
 
 .navbar {
-  margin-bottom: 20px;
+    background-color: rgba(0, 0, 0, 0.2) !important;
+    backdrop-filter: blur(10px);
+}
+
+.navbar-brand, .nav-link {
+    color: #ffffff !important;
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+    transform: translateY(-2px);
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+#search-input {
+    border-radius: 25px 0 0 25px;
+    border: none;
+    padding: 10px 20px;
+}
+
+#search-button, #mic-button {
+    border-radius: 0 25px 25px 0;
+    padding: 10px 20px;
+}
+
+.app-icon {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 20px;
+    margin: 10px;
+    text-align: center;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.app-icon:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.app-icon i {
+    font-size: 2rem;
+    margin-bottom: 10px;
 }
 
 #links-container a {
-  color: #fff;
-  margin: 10px;
-  text-decoration: none;
+    color: #ffffff;
+    margin: 0 10px;
+    text-decoration: none;
+    transition: all 0.3s ease;
 }
 
 #links-container a:hover {
-  text-decoration: underline;
+    color: #ffd700;
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
 }
 
-#apps-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
+.animate__animated {
+    animation-duration: 1s;
 }
 
-#apps-container a {
-  background-color: rgba(255, 255, 255, 0.1);
-  padding: 10px;
-  border-radius: 8px;
-  text-align: center;
-  color: #fff;
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
 }
 
-#apps-container a:hover {
-  background-color: rgba(255, 255, 255, 0.2);
-}
-
-#search-container {
-  display: flex;
-  justify-content: center;
-  margin: 20px;
-}
-
-#search-input-container {
-  display: flex;
-  align-items: center;
-}
-
-#search-input-container input {
-  padding: 10px;
-  border-radius: 5px;
-  border: none;
-  margin-right: 10px;
+.floating {
+    animation: float 3s ease-in-out infinite;
 }
