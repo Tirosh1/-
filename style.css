@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css?family=Pacifico');
+:root {
+  --body-color: 48 48 58;
+  
+  --font-color: 255 255 255;
+  --highlight-color: 0 0 0;
+  
+  --theme-background: 20 20 20;
+}
+
+body {
+  background-color: rgb(var(--body-color));
+  margin: 0px;
+  font-family: "Noto Sans", sans-serif;
+}
+
+.navbar {
+  margin-bottom: 20px;
+}
+
+#links-container a {
+  color: #fff;
+  margin: 10px;
+  text-decoration: none;
+}
+
+#links-container a:hover {
+  text-decoration: underline;
+}
+
+#apps-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+#apps-container a {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 10px;
+  border-radius: 8px;
+  text-align: center;
+  color: #fff;
+}
+
+#apps-container a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+#search-container {
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+}
+
+#search-input-container {
+  display: flex;
+  align-items: center;
+}
+
+#search-input-container input {
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  margin-right: 10px;
+}

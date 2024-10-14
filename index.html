@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Chrome Homepage</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Custom Home</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="https://gmail.com">Gmail</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://outlook.com">Outlook</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/YourProfile">GitHub</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://youtube.com">YouTube</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div id="main-wrapper" class="fancy-scrollbar">
+  <div id="main">
+    <div id="content">
+      <!-- Links Container -->
+      <div id="links-container" style="padding-left: 30%; padding-right: 30%;">
+        <a href="https://onedrive.live.com">OneDrive</a>
+        <a href="https://www.useblackbox.io">Blackbox AI</a>
+        <a href="https://blynk.io">Blynk IoT</a>
+        <a href="https://claude.ai">Claude AI</a>
+      </div>
+      
+      <!-- Custom Search Container -->
+      <div id="search-container" style="margin-top: 5%;">
+        <div id="search-input-container">
+          <img src="https://assets.codepen.io/1468070/Google+G+Icon.png" alt="" />
+          <input type="text" placeholder="Search anything" id="search" />
+        </div>
+        <button id="image-button" onclick="googleSearch();" type="button">
+          <i class="fa-solid fa-search"></i>
+        </button>
+        <button id="mic-button" type="button">
+          <i class="fa-solid fa-microphone"></i>
+        </button>
+      </div>
+
+      <!-- Apps Container -->
+      <div id="apps-container">
+        <a href="https://onedrive.live.com">
+          <i class="fa-brands fa-microsoft"></i>
+          <div class="label">
+            <span class="name">OneDrive</span>
+            <span class="url" contenteditable="true">onedrive.live.com</span>
+          </div>
+        </a>
+        <a href="https://www.useblackbox.io">
+          <i class="fa-solid fa-robot"></i>
+          <div class="label">
+            <span class="name">Blackbox AI</span>
+            <span class="url" contenteditable="true">useblackbox.io</span>
+          </div>
+        </a>
+        <a href="https://blynk.io">
+          <i class="fa-solid fa-cloud"></i>
+          <div class="label">
+            <span class="name">Blynk IoT</span>
+            <span class="url" contenteditable="true">blynk.io</span>
+          </div>
+        </a>
+        <a href="https://claude.ai">
+          <i class="fa-solid fa-brain"></i>
+          <div class="label">
+            <span class="name">Claude AI</span>
+            <span class="url" contenteditable="true">claude.ai</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
